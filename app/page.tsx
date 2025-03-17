@@ -1,5 +1,5 @@
 import type React from "react";
-import { ArrowRight, Brain, Dumbbell, Zap } from "lucide-react";
+import { ArrowRight, Brain, Dumbbell, Zap, Keyboard, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import ExerciseCard from "@/components/ExerciseCard";
@@ -68,6 +68,20 @@ export default function Home() {
               icon={<Brain className="h-10 w-10" />}
               href="https://www.memozor.com/other-memory-games/words-memory-games/stroop-effect-game"
               gradient="from-green-500 to-emerald-500"
+            />
+            <ExerciseCard
+              title="Speed Typing"
+              description="Improves typing speed, accuracy, and finger dexterity"
+              icon={<Keyboard className="h-10 w-10" />}
+              href="https://monkeytype.com/"
+              gradient="from-red-500 to-pink-500"
+            />
+            <ExerciseCard
+              title="Trivia"
+              description="Test your knowledge and boost cognitive recall"
+              icon={<HelpCircle className="h-10 w-10" />}
+              href="/trivia"
+              gradient="from-yellow-500 to-green-500"
             />
           </div>
         </section>
