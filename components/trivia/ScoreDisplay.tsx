@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { Button } from '@/components/ui/button';
 
 interface ScoreDisplayProps {
     score: number;
@@ -26,12 +27,9 @@ const ScoreDisplay: React.FC<ScoreDisplayProps> = ({ score, totalQuestions, onRe
       <p className="text-xl mb-2">Your score: {score} out of {totalQuestions}</p>
       <p className="text-2xl font-bold mb-4">{percentage}%</p>
       <p className="text-xl mb-6">{message}</p>
-      <button 
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-        onClick={onRestart}
-      >
+      <Button size="lg" className="gap-2" onClick={onRestart}>
         Play Again
-      </button>
+      </Button>
     </div>
   );
 };

@@ -14,7 +14,11 @@ interface ExerciseCardProps {
 
 export default function ExerciseCard({ title, description, icon, href, gradient }: ExerciseCardProps) {
   return (
-    <Link href={href} target="_blank" rel="noopener noreferrer" className="block">
+    <Link
+      href={href}
+      className="block"
+      {...(href.startsWith('/') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+    >
       <Card className="group relative flex flex-col justify-between overflow-hidden rounded-xl border border-gray-800 bg-black/50 transition-all duration-300 hover:scale-105 hover:shadow-lg cursor-pointer h-[16rem]">
         <div
           className={cn(

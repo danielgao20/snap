@@ -30,9 +30,9 @@ const TriviaQuestion: React.FC<TriviaQuestionProps> = ({
             
             if (isAnswered) {
                 if (option === correctAnswer) {
-                buttonClasses += " bg-green-600 hover:bg-green-700";
+                buttonClasses += " bg-emerald-700/80 hover:bg-emerald-800 text-white";
                 } else if (option === selectedAnswer) {
-                buttonClasses += " bg-red-600 hover:bg-red-700";
+                buttonClasses += " bg-rose-700/80 hover:bg-rose-800 text-white";
                 } else {
                 buttonClasses += " bg-gray-700 hover:bg-gray-800";
                 }
